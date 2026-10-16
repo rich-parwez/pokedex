@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pokedex.css" />
+    <script src="pokedex.js" defer></script>
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <button id="theme-btn" type="button" aria-label="Ganti tema">🖤</button>
+
+    <div id="content-box">
+      <div id="pokemon-info">
+        <h2 id="pokemon-name">Pokédex</h2>
+        <img id="pokemon-img" src="" alt="" />
+
+        <div id="pokemon-actions">
+          <button id="cry-btn" type="button"> Tangisan</button>
+          <button id="shiny-btn" type="button"> Shiny</button>
+          <button id="fav-btn" type="button">♡ Favorit</button>
+        </div>
+
+        <div id="pokemon-types"></div>
+        <p id="pokemon-description">Pilih Pokémon dari daftar.</p>
+        <div id="pokemon-body"></div>
+        <div id="pokemon-stats"></div>
+        <div id="pokemon-evolution"></div>
+      </div>
+
+
+      <div id="right-panel">
+        <div id="controls">
+          <input id="search" type="search" placeholder="Cari nama atau nomor..." />
+          <div id="filter-row">
+            <select id="gen-select" aria-label="Generasi"></select>
+            <select id="type-filter" aria-label="Tipe">
+              <option value="all">Semua tipe</option>
+            </select>
+          </div>
+          <label class="fav-label"><input id="fav-only" type="checkbox" /> Favorit saja</label>
+        </div>
+
+        <div id="loading">
+          <p id="loading-text">Memuat Pokémon...</p>
+          <div id="progress"><div id="progress-bar"></div></div>
+          <button id="retry-btn" type="button" hidden>Coba lagi</button>
+        </div>
+
+        <div id="pokemon-list"></div>
+      </div>
+    </div>
+  </body>
+</html>
